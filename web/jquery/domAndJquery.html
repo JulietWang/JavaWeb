@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery对象和JavaScript对象之间的转换</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<input type="text" value="王五" id="username" class="username">
+<script>
+    //1.把dom对象转换为Jquery对象
+    //获取dom对象  --->利用js的方式获取
+    var usernameEle = document.getElementById("username");
+    //dom对象只能使用dom的方法 不能使用jquery的方法
+    alert(usernameEle.value);
+    //dom对象转换为jquery对象只需要加上$
+    var $usernameEle = $(usernameEle);
+    //jquery对象只能使用jquery的方法 不能使用dom对象的方法
+    alert($usernameEle.val());
+
+    /********************************************/
+    //2.把jquery对象转换为dom对象
+    //可以直接获取jquery对象  利用jquery方法获取到的都是jquery对象
+    var $usernameCla = $("#username");
+    alert($usernameCla.val());
+
+    //2.1把jquery利用下标的形式获取dom对象
+    var username = $usernameCla[0];
+    alert(username.value);
+
+    //2.2 利用jquery本身的方法转换为dom对象
+    var username = $usernameCla.get[0];
+    alert(username.value);
+</script>
+<body>
+</body>
+</html>

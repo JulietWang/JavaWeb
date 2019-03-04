@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery练习1</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    //为了防止文档在完全加载（就绪）之前运行 jQuery 代码，
+    //即在 DOM 加载完成后才可以对 DOM 进行操作 $(document).ready(function(){} 或者 $(function(){})
+    $(document).ready(function(){
+        $("p").click(function(){
+            $(this).hide();
+        });
+    });
+    $(function(){
+        $("button").click(function(){
+            $("p").hide();
+        });
+    });
+    $(function(){
+        $("button").click(function(){
+            $("#xixi").hide();
+        });
+    });
+    $(function(){
+        $("button").click(function(){
+            $(".xixi").hide();
+        });
+    });
+</script>
+<body>
+<!--    <p>如果你点我,我会消失</p>
+    <p>继续点我</p>
+    <p>接着点我</p>
+    <button>测试元素选择器</button>-->
+
+<!--    <input type="text" value="点下面的按钮我会消失哦" id="xixi"><br/>
+    <button>测试#id选择器</button>-->
+
+    <input type="text" value="点下面的按钮我会消失哦" class="xixi"><br/>
+    <button>测试.class选择器</button>
+</body>
+</html>

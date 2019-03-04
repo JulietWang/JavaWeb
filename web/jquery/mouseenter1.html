@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#btn1").click(function () {
+            $("p").mouseenter();
+        });
+        $("#btn2").click(function () {
+            $("p").mouseleave();
+        });
+        $("p").mouseenter(function () {
+            $("p").css("background-color","yellow");
+        });
+        $("p").mouseleave(function () {
+            $("p").css("background-color","gray");
+        });
+    });
+</script>
+<body>
+    <p>这是一个段落。</p>
+    <button id="btn1">触发 mouseenter 事件</button><br>
+    <button id="btn2">触发 mouseleave 事件</button>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加函数到click事件：</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("p").click(function () {//dblclick双击
+            alert("我被点击了");
+            $(this).fadeOut();
+        });
+    });
+</script>
+<body>
+    <p>这个段落被点击了</p>
+</body>
+</html>

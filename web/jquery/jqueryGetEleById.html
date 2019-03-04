@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过id方式获取Jquery对象</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#id1").html("获取Jquery对象");
+    })
+</script>
+<body>
+    <!--只有第一个变了内容 $("#id1")得到的是数组 也就是获取到的是id是id1的数组并默认是取第一个值-->
+    <p id="id1">试试根据id获取</p>
+    <div id="id1">
+        测试看看
+    </div>
+    <span id="id1">测试一次</span>
+</body>
+</html>

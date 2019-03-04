@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery keypress() 方法</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    i=0;
+    $(function () {
+        /**
+         * 与 keydown 事件相关的事件顺序：
+         keydown - 键按下的过程
+         keypress - 键被按下
+         keyup - 键被松开
+         当键盘键被按下时发生 keydown 事件。
+         */
+        //keypress 事件不会触发所有的键（比如 ALT、CTRL、SHIFT、ESC）
+        $("input").keypress(function () {
+            $("span").text(i+=1);
+        });
+        $("input").keyup(function () {
+            $("input").css("background-color","pink");
+        })
+        $("input").keydown(function () {
+            $("input").css("background-color","yellow");
+        })
+    });
+</script>
+<body>
+    输入你的名字:<input type="text">
+    <p>按键的次数:<span>0</span></p>
+</body>
+</html>

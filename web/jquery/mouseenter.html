@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当鼠标指针穿过（进入）被选元素时，会发生 mouseenter事件。</title>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("p").mouseenter(function () {
+            $("p").css("background-color","yellow");
+        });
+        $("p").mouseleave(function () {
+            $("p").css("background-color","gray");
+        });
+    });
+</script>
+<body>
+    <p>鼠标移动到此处</p>
+</body>
+</html>
